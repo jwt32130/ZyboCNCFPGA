@@ -1,0 +1,7 @@
+*
+!*/
+!.gitignore
+!project_1/*.tcl
+!project_1/*.xpr
+!Constraints/**
+!rtl/**
