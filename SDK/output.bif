@@ -1,0 +1,7 @@
+//arch = zynq; split = false; format = BIN
+the_ROM_image:
+{
+	[bootloader]/home/jacob/Documents/CNCMillZybo/ZyboFPGA/SDK/TestHardware/zynq_fsbl/fsbl.elf
+	/home/jacob/Documents/CNCMillZybo/ZyboFPGA/project_1/project_1.runs/impl_1/design_1_wrapper.bit
+	/home/jacob/Documents/CNCMillZybo/u-boot-xlnx/u-boot.elf
+}

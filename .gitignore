@@ -5,3 +5,7 @@
 !project_1/*.xpr
 !Constraints/**
 !rtl/**
+!*.xsa
+!Notes/**
+!SDK/BOOT.bin
+!SDK/output.bif
