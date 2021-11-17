@@ -9,3 +9,6 @@
 !Notes/**
 !SDK/BOOT.bin
 !SDK/output.bif
+!ip_repo/TestAdder_1.0/**
+!ip_repo/*.xpr
+!/SDK/**

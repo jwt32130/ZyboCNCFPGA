@@ -198,3 +198,6 @@ set_property -dict { PACKAGE_PIN D18   IOSTANDARD LVCMOS33 } [get_ports { leds_t
 
 
 
+
+set_property IOSTANDARD LVCMOS33 [get_ports {gpio_rtl_tri_i[0]}]
+set_property PACKAGE_PIN P15 [get_ports {gpio_rtl_tri_i[0]}]
