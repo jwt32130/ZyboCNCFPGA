@@ -216,7 +216,7 @@ begin
 	    if S_AXI_ARESETN = '0' then
 	      slv_reg0 <= (others => '0'); --number1
 	      slv_reg1 <= (others => '0'); --number2
-	      slv_reg2 <= (others => '0'); --start
+	    --   slv_reg2 <= (others => '0'); --start
 	    --   slv_reg3 <= (others => '0'); --value
 	    else
 	      loc_addr := axi_awaddr(ADDR_LSB + OPT_MEM_ADDR_BITS downto ADDR_LSB);
@@ -257,7 +257,7 @@ begin
 	          when others =>
 	            slv_reg0 <= slv_reg0;
 	            slv_reg1 <= slv_reg1;
-	            slv_reg2 <= slv_reg2;
+	            -- slv_reg2 <= slv_reg2;
 	            -- slv_reg3 <= slv_reg3;
 	        end case;
 	      end if;
@@ -389,10 +389,22 @@ begin
 	variable loc_addr :std_logic_vector(OPT_MEM_ADDR_BITS downto 0); 
 	begin
 	  if rising_edge(S_AXI_ACLK) then 
-		loc_addr := axi_awaddr(ADDR_LSB + OPT_MEM_ADDR_BITS downto ADDR_LSB);
-		if (slv_reg_wren = '1') then
-			if(loc_addr = b"10") and (S_AXI_WSTRB(0) = '1') then
-				slv_reg3 <= std_logic_vector( signed(slv_reg0) + signed(slv_reg1));
+		if (S_AXI_ARESETN = '0') then
+			InterruptOut <= '0';
+			slv_reg2 <= (others => '0'); --start
+		else
+			loc_addr := axi_awaddr(ADDR_LSB + OPT_MEM_ADDR_BITS downto ADDR_LSB);
+			if (slv_reg_wren = '1') then
+				if(loc_addr = b"10") and (S_AXI_WSTRB(0) = '1') then
+					if(S_AXI_WDATA(0) = '1') then
+						slv_reg3 <= std_logic_vector( signed(slv_reg0) + signed(slv_reg1));
+						slv_reg2 <= x"00000002";
+						InterruptOut <= '1';
+					elsif(S_AXI_WDATA(1) = '1') then
+						InterruptOut <= '0';
+						slv_reg2 <= x"00000000";
+					end if;
+				end if;
 			end if;
 		end if;
 	  end if;

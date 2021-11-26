@@ -52,19 +52,23 @@
 #include "xscugic.h"
 #include <stdatomic.h>
 #include "xgpio.h"
+#include <stdbool.h>
 
 XGpio Gpio;
 XScuGic InterruptController;
 static XScuGic_Config *GicConfig;
 int SetUpInterruptSystem(XScuGic *XScuGicInstancePtr);
 void DeviceDriverHandler(void *CallbackRef);
+void DeviceDriverHandler2(void *CallbackRef);
 
+atomic_bool adderdone;
 atomic_int interruptCount;
 
 int main()
 {
     int Status;
     interruptCount = 0;
+	adderdone = false;
     init_platform();
 
     Status = XGpio_Initialize(&Gpio, XPAR_GPIO_0_DEVICE_ID);
@@ -83,6 +87,7 @@ int main()
 		return XST_FAILURE;
 	}
     XScuGic_SetPriorityTriggerType(&InterruptController, XPAR_FABRIC_AXI_GPIO_0_IP2INTC_IRPT_INTR,0xA0, 0x3);
+    XScuGic_SetPriorityTriggerType(&InterruptController, 62, 0x80, 0x3);
 
 
 
@@ -117,12 +122,20 @@ int main()
 	if (Status != XST_SUCCESS) {
 		return XST_FAILURE;
 	}
+	Status = XScuGic_Connect(&InterruptController, 62,
+			   (Xil_ExceptionHandler)DeviceDriverHandler2,
+			   NULL);
+
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
 
 	/*
 	 * Enable the interrupt for the device and then cause (simulate) an
 	 * interrupt so the handlers will be called
 	 */
 	XScuGic_Enable(&InterruptController, XPAR_FABRIC_AXI_GPIO_0_IP2INTC_IRPT_INTR);
+	XScuGic_Enable(&InterruptController, 62);
     XGpio_InterruptEnable(&Gpio, 1);
     XGpio_InterruptGlobalEnable(&Gpio);
 	/*
@@ -152,8 +165,11 @@ int main()
         tempVal = Xil_In32(XPAR_TESTADDER_0_S00_AXI_BASEADDR + 0x04);
         xil_printf("number 2 is %d\r\n", tempVal);
 
+		adderdone = false;
         Xil_Out32(XPAR_TESTADDER_0_S00_AXI_BASEADDR + 0x08, 0x00000001 );
-        sleep(1);
+		while(adderdone == false) {
+			usleep(10);
+		}
         tempVal = Xil_In32(XPAR_TESTADDER_0_S00_AXI_BASEADDR + 0x0C);
         xil_printf("number 2 is %d\r\n", tempVal);
         xil_printf("INTCOUNT: %d\r\n", (int)interruptCount);
@@ -190,4 +206,8 @@ void DeviceDriverHandler(void *CallbackRef) {
     // u32 Reg = XGpio_ReadReg(GpioPtr->BaseAddress, XGPIO_ISR_OFFSET);
     interruptCount++;
     XGpio_InterruptClear(GpioPtr, 1);
+}
+void DeviceDriverHandler2(void *CallbackRef) {
+    Xil_Out32(XPAR_TESTADDER_0_S00_AXI_BASEADDR + 0x08, 0x00000002 );
+	adderdone = true;
 }

@@ -1080,3 +1080,222 @@ con
 
 21:26:09 INFO  : Launch script is exported to file '/home/jacob/Documents/CNCMillZybo/ZyboFPGA/SDK/TestIO_system/_ide/scripts/systemdebugger_testio_system_standalone.tcl'
 21:28:22 INFO  : Disconnected from the channel tcfchan#37.
+20:46:08 INFO  : Launching XSCT server: xsct -n  -interactive /home/jacob/Documents/CNCMillZybo/ZyboFPGA/SDK/temp_xsdb_launch_script.tcl
+20:46:09 INFO  : Platform repository initialization has completed.
+20:46:10 INFO  : Registering command handlers for Vitis TCF services
+20:46:11 INFO  : XSCT server has started successfully.
+20:46:11 INFO  : plnx-install-location is set to ''
+20:46:11 INFO  : Successfully done setting XSCT server connection channel  
+20:46:11 INFO  : Successfully done query RDI_DATADIR 
+20:46:11 INFO  : Successfully done setting workspace for the tool. 
+20:49:10 INFO  : Invoking Bootgen: bootgen -image output.bif -arch zynq -o /home/jacob/Documents/CNCMillZybo/ZyboFPGA/SDK/BOOT.bin -w on
+20:49:12 INFO  : Bootgen command execution is done.
+21:10:01 INFO  : Launching XSCT server: xsct -n  -interactive /home/jacob/Documents/CNCMillZybo/ZyboFPGA/SDK/temp_xsdb_launch_script.tcl
+21:10:02 INFO  : Platform repository initialization has completed.
+21:10:03 INFO  : Registering command handlers for Vitis TCF services
+21:10:04 INFO  : XSCT server has started successfully.
+21:10:04 INFO  : Successfully done setting XSCT server connection channel  
+21:10:04 INFO  : plnx-install-location is set to ''
+21:10:04 INFO  : Successfully done query RDI_DATADIR 
+21:10:04 INFO  : Successfully done setting workspace for the tool. 
+21:18:58 INFO  : Result from executing command 'removePlatformRepo': 
+21:19:21 INFO  : Hardware specification for platform project 'TestHardware' is updated.
+21:19:36 INFO  : Result from executing command 'getProjects': TestHardware
+21:19:36 INFO  : Result from executing command 'getPlatforms': 
+21:32:59 INFO  : Result from executing command 'removePlatformRepo': 
+21:33:26 INFO  : Hardware specification for platform project 'TestHardware' is updated.
+21:33:39 INFO  : Result from executing command 'getProjects': TestHardware
+21:33:39 INFO  : Result from executing command 'getPlatforms': 
+21:33:55 INFO  : Result from executing command 'removePlatformRepo': 
+21:34:32 ERROR : Error from executing command 'removePlatformRepo': ERROR: No valid directory exists at given path.
+21:34:46 INFO  : Successfully removed platform .
+21:35:05 INFO  : Launching XSCT server: xsct -n  -interactive /home/jacob/Documents/CNCMillZybo/ZyboFPGA/SDK/temp_xsdb_launch_script.tcl
+21:35:06 INFO  : Platform repository initialization has completed.
+21:35:07 INFO  : Registering command handlers for Vitis TCF services
+21:35:08 INFO  : XSCT server has started successfully.
+21:35:08 INFO  : Successfully done setting XSCT server connection channel  
+21:35:08 INFO  : plnx-install-location is set to ''
+21:35:08 INFO  : Successfully done query RDI_DATADIR 
+21:35:08 INFO  : Successfully done setting workspace for the tool. 
+21:35:22 INFO  : Hardware specification for platform project 'TestHardware' is updated.
+21:35:29 INFO  : Successfully removed platform .
+21:35:54 INFO  : Result from executing command 'getProjects': TestHardware
+21:35:54 INFO  : Result from executing command 'getPlatforms': 
+21:37:13 INFO  : Result from executing command 'removePlatformRepo': 
+21:37:55 INFO  : Hardware specification for platform project 'TestHardware' is updated.
+21:38:20 INFO  : Result from executing command 'getProjects': TestHardware
+21:38:20 INFO  : Result from executing command 'getPlatforms': 
+21:39:55 INFO  : Result from executing command 'getProjects': TestHardware
+21:39:55 INFO  : Result from executing command 'getPlatforms': TestHardware|/home/jacob/Documents/CNCMillZybo/ZyboFPGA/SDK/TestHardware/export/TestHardware/TestHardware.xpfm
+21:47:25 INFO  : Result from executing command 'removePlatformRepo': 
+21:48:06 INFO  : Hardware specification for platform project 'TestHardware' is updated.
+21:49:41 INFO  : Hardware specification for platform project 'TestHardware' is updated.
+21:57:25 ERROR : Error from executing command 'removePlatformRepo': ERROR: No valid directory exists at given path.
+21:57:48 INFO  : Hardware specification for platform project 'TestHardware' is updated.
+22:04:14 ERROR : Error from executing command 'removePlatformRepo': ERROR: No valid directory exists at given path.
+22:04:42 INFO  : Hardware specification for platform project 'TestHardware' is updated.
+22:08:49 ERROR : Error from executing command 'removePlatformRepo': ERROR: No valid directory exists at given path.
+22:09:02 INFO  : Hardware specification for platform project 'TestHardware' is updated.
+22:09:40 INFO  : No changes in MSS file content so sources will not be generated.
+22:15:36 INFO  : Hardware specification for platform project 'TestHardware' is updated.
+22:17:01 INFO  : Result from executing command 'getProjects': TestHardware
+22:17:01 INFO  : Result from executing command 'getPlatforms': 
+22:25:18 INFO  : Result from executing command 'removePlatformRepo': 
+22:25:55 INFO  : Hardware specification for platform project 'TestHardware' is updated.
+22:33:01 INFO  : Hardware specification for platform project 'TestHardware' is updated.
+22:34:22 INFO  : Result from executing command 'getProjects': TestHardware
+22:34:22 INFO  : Result from executing command 'getPlatforms': 
+22:35:52 INFO  : Checking for BSP changes to sync application flags for project 'TestIO'...
+22:35:53 INFO  : Updating application flags with new BSP settings...
+22:35:53 INFO  : Successfully updated application flags for project TestIO.
+22:35:54 INFO  : The hardware specification used by project 'TestIO' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+22:35:54 INFO  : The file '/home/jacob/Documents/CNCMillZybo/ZyboFPGA/SDK/TestIO/_ide/bitstream/design_1_wrapper.bit' stored in project is removed.
+22:35:54 INFO  : The updated bitstream files are copied from platform to folder '/home/jacob/Documents/CNCMillZybo/ZyboFPGA/SDK/TestIO/_ide/bitstream' in project 'TestIO'.
+22:35:54 INFO  : The file '/home/jacob/Documents/CNCMillZybo/ZyboFPGA/SDK/TestIO/_ide/psinit/ps7_init.tcl' stored in project is removed.
+22:35:58 INFO  : The updated ps init files are copied from platform to folder '/home/jacob/Documents/CNCMillZybo/ZyboFPGA/SDK/TestIO/_ide/psinit' in project 'TestIO'.
+22:44:10 INFO  : Checking for BSP changes to sync application flags for project 'TestIO'...
+22:44:34 INFO  : Checking for BSP changes to sync application flags for project 'TestIO'...
+22:44:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:44:56 INFO  : Jtag cable 'Digilent Zybo Z7 210351A7854EA' is selected.
+22:44:56 INFO  : 'jtag frequency' command is executed.
+22:44:56 INFO  : Context for 'APU' is selected.
+22:44:56 INFO  : System reset is completed.
+22:44:59 INFO  : 'after 3000' command is executed.
+22:44:59 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A7854EA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351A7854EA-23727093-0"}' command is executed.
+22:44:59 ERROR : couldn't open "/home/jacob/Documents/CNCMillZybo/ZyboFPGA/SDK/TestIO/_ide/bitstream/design_1_wrapper.bit": no such file or directory
+22:44:59 ERROR : Exception occured while running Program Device.
+java.lang.RuntimeException: couldn't open "/home/jacob/Documents/CNCMillZybo/ZyboFPGA/SDK/TestIO/_ide/bitstream/design_1_wrapper.bit": no such file or directory
+22:44:59 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+----------------End of Script----------------
+
+22:44:59 ERROR : couldn't open "/home/jacob/Documents/CNCMillZybo/ZyboFPGA/SDK/TestIO/_ide/bitstream/design_1_wrapper.bit": no such file or directory
+22:45:47 INFO  : Result from executing command 'removePlatformRepo': 
+22:46:00 INFO  : Hardware specification for platform project 'TestHardware' is updated.
+22:46:15 INFO  : Result from executing command 'getProjects': TestHardware
+22:46:15 INFO  : Result from executing command 'getPlatforms': 
+22:46:32 INFO  : Checking for BSP changes to sync application flags for project 'TestIO'...
+22:46:34 INFO  : The hardware specification used by project 'TestIO' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+22:46:34 INFO  : The updated bitstream files are copied from platform to folder '/home/jacob/Documents/CNCMillZybo/ZyboFPGA/SDK/TestIO/_ide/bitstream' in project 'TestIO'.
+22:46:34 INFO  : The file '/home/jacob/Documents/CNCMillZybo/ZyboFPGA/SDK/TestIO/_ide/psinit/ps7_init.tcl' stored in project is removed.
+22:46:38 INFO  : The updated ps init files are copied from platform to folder '/home/jacob/Documents/CNCMillZybo/ZyboFPGA/SDK/TestIO/_ide/psinit' in project 'TestIO'.
+22:46:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:46:45 INFO  : Jtag cable 'Digilent Zybo Z7 210351A7854EA' is selected.
+22:46:45 INFO  : 'jtag frequency' command is executed.
+22:46:45 INFO  : Context for 'APU' is selected.
+22:46:45 INFO  : System reset is completed.
+22:46:48 INFO  : 'after 3000' command is executed.
+22:46:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A7854EA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351A7854EA-23727093-0"}' command is executed.
+22:46:50 INFO  : Device configured successfully with "/home/jacob/Documents/CNCMillZybo/ZyboFPGA/SDK/TestIO/_ide/bitstream/design_1_wrapper.bit"
+22:46:50 INFO  : Context for 'APU' is selected.
+22:46:50 INFO  : Hardware design and registers information is loaded from '/home/jacob/Documents/CNCMillZybo/ZyboFPGA/SDK/TestHardware/export/TestHardware/hw/design_1_wrapper.xsa'.
+22:46:50 INFO  : 'configparams force-mem-access 1' command is executed.
+22:46:50 INFO  : Context for 'APU' is selected.
+22:46:50 INFO  : Sourcing of '/home/jacob/Documents/CNCMillZybo/ZyboFPGA/SDK/TestIO/_ide/psinit/ps7_init.tcl' is done.
+22:46:51 INFO  : 'ps7_init' command is executed.
+22:46:51 INFO  : 'ps7_post_config' command is executed.
+22:46:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:46:51 INFO  : The application '/home/jacob/Documents/CNCMillZybo/ZyboFPGA/SDK/TestIO/Debug/TestIO.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:46:51 INFO  : 'configparams force-mem-access 0' command is executed.
+22:46:51 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A7854EA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351A7854EA-23727093-0"}
+fpga -file /home/jacob/Documents/CNCMillZybo/ZyboFPGA/SDK/TestIO/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/jacob/Documents/CNCMillZybo/ZyboFPGA/SDK/TestHardware/export/TestHardware/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/jacob/Documents/CNCMillZybo/ZyboFPGA/SDK/TestIO/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/jacob/Documents/CNCMillZybo/ZyboFPGA/SDK/TestIO/Debug/TestIO.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:46:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:46:51 INFO  : 'con' command is executed.
+22:46:51 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:46:51 INFO  : Launch script is exported to file '/home/jacob/Documents/CNCMillZybo/ZyboFPGA/SDK/TestIO_system/_ide/scripts/systemdebugger_testio_system_standalone.tcl'
+22:48:08 INFO  : Disconnected from the channel tcfchan#14.
+22:49:13 INFO  : Checking for BSP changes to sync application flags for project 'TestIO'...
+22:49:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:49:23 INFO  : Jtag cable 'Digilent Zybo Z7 210351A7854EA' is selected.
+22:49:23 INFO  : 'jtag frequency' command is executed.
+22:49:23 INFO  : Context for 'APU' is selected.
+22:49:23 INFO  : System reset is completed.
+22:49:26 INFO  : 'after 3000' command is executed.
+22:49:26 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A7854EA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351A7854EA-23727093-0"}' command is executed.
+22:49:28 INFO  : Device configured successfully with "/home/jacob/Documents/CNCMillZybo/ZyboFPGA/SDK/TestIO/_ide/bitstream/design_1_wrapper.bit"
+22:49:28 INFO  : Context for 'APU' is selected.
+22:49:28 INFO  : Hardware design and registers information is loaded from '/home/jacob/Documents/CNCMillZybo/ZyboFPGA/SDK/TestHardware/export/TestHardware/hw/design_1_wrapper.xsa'.
+22:49:28 INFO  : 'configparams force-mem-access 1' command is executed.
+22:49:28 INFO  : Context for 'APU' is selected.
+22:49:28 INFO  : Sourcing of '/home/jacob/Documents/CNCMillZybo/ZyboFPGA/SDK/TestIO/_ide/psinit/ps7_init.tcl' is done.
+22:49:29 INFO  : 'ps7_init' command is executed.
+22:49:29 INFO  : 'ps7_post_config' command is executed.
+22:49:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:49:29 INFO  : The application '/home/jacob/Documents/CNCMillZybo/ZyboFPGA/SDK/TestIO/Debug/TestIO.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:49:29 INFO  : 'configparams force-mem-access 0' command is executed.
+22:49:29 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A7854EA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351A7854EA-23727093-0"}
+fpga -file /home/jacob/Documents/CNCMillZybo/ZyboFPGA/SDK/TestIO/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/jacob/Documents/CNCMillZybo/ZyboFPGA/SDK/TestHardware/export/TestHardware/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source /home/jacob/Documents/CNCMillZybo/ZyboFPGA/SDK/TestIO/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow /home/jacob/Documents/CNCMillZybo/ZyboFPGA/SDK/TestIO/Debug/TestIO.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:49:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:49:29 INFO  : 'con' command is executed.
+22:49:29 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:49:29 INFO  : Launch script is exported to file '/home/jacob/Documents/CNCMillZybo/ZyboFPGA/SDK/TestIO_system/_ide/scripts/systemdebugger_testio_system_standalone.tcl'
+22:50:57 INFO  : Disconnected from the channel tcfchan#19.
+17:44:01 INFO  : Launching XSCT server: xsct -n  -interactive /home/jacob/Documents/CNCMillZybo/ZyboFPGA/SDK/temp_xsdb_launch_script.tcl
+17:44:03 INFO  : Platform repository initialization has completed.
+17:44:04 INFO  : Registering command handlers for Vitis TCF services
+17:44:04 INFO  : XSCT server has started successfully.
+17:44:04 INFO  : Successfully done setting XSCT server connection channel  
+17:44:04 INFO  : plnx-install-location is set to ''
+17:44:05 INFO  : Successfully done setting workspace for the tool. 
+17:44:05 INFO  : Successfully done query RDI_DATADIR 
+17:44:14 INFO  : Result from executing command 'removePlatformRepo': 
+17:45:15 INFO  : Hardware specification for platform project 'TestHardware' is updated.
+17:46:40 INFO  : Result from executing command 'getProjects': TestHardware
+17:46:40 INFO  : Result from executing command 'getPlatforms': 
+17:48:38 INFO  : Result from executing command 'getProjects': TestHardware
+17:48:38 INFO  : Result from executing command 'getPlatforms': TestHardware|/home/jacob/Documents/CNCMillZybo/ZyboFPGA/SDK/TestHardware/export/TestHardware/TestHardware.xpfm
+18:01:52 INFO  : Launching XSCT server: xsct -n  -interactive /home/jacob/Documents/CNCMillZybo/ZyboFPGA/SDK/temp_xsdb_launch_script.tcl
+18:01:53 INFO  : Platform repository initialization has completed.
+18:01:54 INFO  : Registering command handlers for Vitis TCF services
+18:01:55 INFO  : XSCT server has started successfully.
+18:01:55 INFO  : Successfully done setting XSCT server connection channel  
+18:01:55 INFO  : plnx-install-location is set to ''
+18:01:55 INFO  : Successfully done setting workspace for the tool. 
+18:01:55 INFO  : Successfully done query RDI_DATADIR 
+18:02:38 INFO  : Invoking Bootgen: bootgen -image output.bif -arch zynq -o /home/jacob/Documents/CNCMillZybo/ZyboFPGA/SDK/BOOT.bin -w on
+18:02:40 INFO  : Bootgen command execution is done.
