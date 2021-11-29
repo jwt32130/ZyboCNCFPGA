@@ -53,20 +53,44 @@
 #include <stdatomic.h>
 #include "xgpio.h"
 #include <stdbool.h>
+#include "xaxidma.h"
 
+#define DMA_DEV_ID		XPAR_AXIDMA_0_DEVICE_ID
 XGpio Gpio;
+XAxiDma AxiDma;
 XScuGic InterruptController;
 static XScuGic_Config *GicConfig;
 int SetUpInterruptSystem(XScuGic *XScuGicInstancePtr);
 void DeviceDriverHandler(void *CallbackRef);
 void DeviceDriverHandler2(void *CallbackRef);
 
+int XAxiDma_SimplePollExample(u16 DeviceId);
+static int CheckData(void);
 atomic_bool adderdone;
 atomic_int interruptCount;
 
 int main()
 {
     int Status;
+
+	xil_printf("\r\n--- Entering main() --- \r\n");
+
+	/* Run the poll example for simple transfer */
+	Status = XAxiDma_SimplePollExample(DMA_DEV_ID);
+
+	if (Status != XST_SUCCESS) {
+		xil_printf("XAxiDma_SimplePoll Example Failed\r\n");
+		return XST_FAILURE;
+	}
+
+	xil_printf("Successfully ran XAxiDma_SimplePoll Example\r\n");
+
+	xil_printf("--- Exiting main() --- \r\n");
+
+	return XST_SUCCESS;
+
+
+
     interruptCount = 0;
 	adderdone = false;
     init_platform();

@@ -1299,3 +1299,31 @@ con
 18:01:55 INFO  : Successfully done query RDI_DATADIR 
 18:02:38 INFO  : Invoking Bootgen: bootgen -image output.bif -arch zynq -o /home/jacob/Documents/CNCMillZybo/ZyboFPGA/SDK/BOOT.bin -w on
 18:02:40 INFO  : Bootgen command execution is done.
+00:19:01 INFO  : Launching XSCT server: xsct -n  -interactive /home/jacob/Documents/CNCMillZybo/ZyboFPGA/SDK/temp_xsdb_launch_script.tcl
+00:19:02 INFO  : Platform repository initialization has completed.
+00:19:03 INFO  : Registering command handlers for Vitis TCF services
+00:19:04 INFO  : XSCT server has started successfully.
+00:19:04 INFO  : Successfully done setting XSCT server connection channel  
+00:19:04 INFO  : plnx-install-location is set to ''
+00:19:04 INFO  : Successfully done setting workspace for the tool. 
+00:19:04 INFO  : Successfully done query RDI_DATADIR 
+00:19:11 INFO  : Result from executing command 'removePlatformRepo': 
+00:19:24 INFO  : Hardware specification for platform project 'TestHardware' is updated.
+00:19:57 INFO  : Result from executing command 'getProjects': TestHardware
+00:19:57 INFO  : Result from executing command 'getPlatforms': 
+00:22:17 INFO  : Invoking Bootgen: bootgen -image output.bif -arch zynq -o /home/jacob/Documents/CNCMillZybo/ZyboFPGA/SDK/BOOT.bin -w on
+00:22:18 INFO  : Bootgen command execution is done.
+17:02:28 INFO  : Invoking Bootgen: bootgen -image output.bif -arch zynq -o /home/jacob/Documents/CNCMillZybo/ZyboFPGA/SDK/BOOT.bin -w on
+17:02:29 INFO  : Bootgen command execution is done.
+17:22:41 INFO  : Result from executing command 'removePlatformRepo': 
+17:22:58 INFO  : Hardware specification for platform project 'TestHardware' is updated.
+17:23:22 INFO  : Result from executing command 'getProjects': TestHardware
+17:23:22 INFO  : Result from executing command 'getPlatforms': 
+17:24:16 INFO  : Invoking Bootgen: bootgen -image output.bif -arch zynq -o /home/jacob/Documents/CNCMillZybo/ZyboFPGA/SDK/BOOT.bin -w on
+17:24:17 INFO  : Bootgen command execution is done.
+20:45:10 INFO  : Result from executing command 'removePlatformRepo': 
+20:45:24 INFO  : Hardware specification for platform project 'TestHardware' is updated.
+20:45:55 INFO  : Result from executing command 'getProjects': TestHardware
+20:45:55 INFO  : Result from executing command 'getPlatforms': 
+20:48:05 INFO  : Invoking Bootgen: bootgen -image output.bif -arch zynq -o /home/jacob/Documents/CNCMillZybo/ZyboFPGA/SDK/BOOT.bin -w on
+20:48:07 INFO  : Bootgen command execution is done.
