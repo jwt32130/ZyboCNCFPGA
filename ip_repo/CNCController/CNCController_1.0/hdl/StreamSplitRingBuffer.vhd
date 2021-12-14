@@ -12,6 +12,8 @@ entity StreamSplitRingBuffer is
 		reverse_in : in std_logic;
 		reverse_out : out std_logic;
 
+		new_data_clocked_in : out std_logic;
+
 		-- AXI4Stream sink: Clock
 		AXIS_ACLK	: in std_logic;
 		-- AXI4Stream sink: Reset
@@ -136,6 +138,8 @@ begin
 	write_stream <= (write_forward or write_fifo_backward or write_fifo_forward ) and (not stop_and_clear);
 	tx_good <= M00_AXIS_TREADY and write_stream;
 	fifo_index <= read_index when reverse_in = '1' else fill_index;
+
+	new_data_clocked_in <= rx_good and tx_good;
 
 	process( AXIS_ACLK )
 	begin

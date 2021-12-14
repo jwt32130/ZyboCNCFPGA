@@ -1,7 +1,7 @@
 --Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
---Date        : Mon Dec 13 01:38:35 2021
+--Date        : Sun Dec 12 22:58:24 2021
 --Host        : jacob-VirtualBox running 64-bit Ubuntu 20.04.3 LTS
 --Command     : generate_target design_1_wrapper.bd
 --Design      : design_1_wrapper
@@ -11,7 +11,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity design_1_wrapper is
+entity CNCController_wrapper is
   port (
     AXIS_ACLK : in STD_LOGIC;
     AXIS_ARESETN : in STD_LOGIC;
@@ -59,14 +59,15 @@ entity design_1_wrapper is
     stop_out : out STD_LOGIC;
     stop_until_clear : in STD_LOGIC
   );
-end design_1_wrapper;
+end CNCController_wrapper;
 
-architecture STRUCTURE of design_1_wrapper is
+architecture STRUCTURE of CNCController_wrapper is
   component design_1 is
   port (
     S_AXI_ACLK : in STD_LOGIC;
     S_AXI_ARESETN : in STD_LOGIC;
     AXIS_ACLK : in STD_LOGIC;
+    AXIS_ARESETN : in STD_LOGIC;
     stop_until_clear : in STD_LOGIC;
     reverse_out_0 : out STD_LOGIC;
     stop_out : out STD_LOGIC;
@@ -107,8 +108,7 @@ architecture STRUCTURE of design_1_wrapper is
     M04_AXIS_0_tready : in STD_LOGIC;
     M05_AXIS_0_tdata : out STD_LOGIC_VECTOR ( 7 downto 0 );
     M05_AXIS_0_tvalid : out STD_LOGIC;
-    M05_AXIS_0_tready : in STD_LOGIC;
-    AXIS_ARESETN : in STD_LOGIC
+    M05_AXIS_0_tready : in STD_LOGIC
   );
   end component design_1;
 begin

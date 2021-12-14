@@ -1,6 +1,7 @@
 *
 !*/
 !.gitignore
+!*.png
 !project_1/*.tcl
 !project_1/*.xpr
 !Constraints/**
@@ -13,6 +14,7 @@
 !ip_repo/TestAdder/*.xpr
 !ip_repo/CNCController/CNCController_1.0/**
 !ip_repo/CNCController/edit_CNCController_v1_0.gen/sources_1/bd/design_1/hdl/*
+!ip_repo/CNCController/edit_CNCController_v1_0.gen/sources_1/bd/design_2/hdl/*
 !ip_repo/CNCController/*.xpr
 !ip_repo/CNCController/*.wcfg
 !/SDK/**

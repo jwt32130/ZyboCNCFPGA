@@ -16,7 +16,13 @@ entity CNCController_v1_0_S00_AXI is
 	);
 	port (
 		-- Users to add ports here
+		reset_controller : out std_logic;
+		stop_and_clear : out std_logic;
+		reset_stop : out std_logic;
+		cnc_op_written : in std_logic;
 
+
+		stop_tripped : in std_logic;
 		-- User ports ends
 		-- Do not modify the ports beyond this line
 
@@ -108,9 +114,13 @@ architecture arch_imp of CNCController_v1_0_S00_AXI is
 	---- Signals for user logic register space example
 	--------------------------------------------------
 	---- Number of Slave Registers 32
-	signal slv_reg0	:std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
-	signal slv_reg1	:std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
-	signal slv_reg2	:std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
+	--ctrl reg
+	signal ctrl_reg0	:std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
+	--status reg
+	signal status_reg1	:std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
+	--cnc op count
+	-- signal opcount_reg2	:std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
+	signal opcount_reg2	:unsigned(C_S_AXI_DATA_WIDTH-1 downto 0);
 	signal slv_reg3	:std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
 	signal slv_reg4	:std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
 	signal slv_reg5	:std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
@@ -242,9 +252,9 @@ begin
 	begin
 	  if rising_edge(S_AXI_ACLK) then 
 	    if S_AXI_ARESETN = '0' then
-	      slv_reg0 <= (others => '0');
-	      slv_reg1 <= (others => '0');
-	      slv_reg2 <= (others => '0');
+	    --   slv_reg0 <= (others => '0');
+	    --   slv_reg1 <= (others => '0');
+	    --   slv_reg2 <= (others => '0');
 	      slv_reg3 <= (others => '0');
 	      slv_reg4 <= (others => '0');
 	      slv_reg5 <= (others => '0');
@@ -283,7 +293,7 @@ begin
 	              if ( S_AXI_WSTRB(byte_index) = '1' ) then
 	                -- Respective byte enables are asserted as per write strobes                   
 	                -- slave registor 0
-	                slv_reg0(byte_index*8+7 downto byte_index*8) <= S_AXI_WDATA(byte_index*8+7 downto byte_index*8);
+	                -- slv_reg0(byte_index*8+7 downto byte_index*8) <= S_AXI_WDATA(byte_index*8+7 downto byte_index*8);
 	              end if;
 	            end loop;
 	          when b"00001" =>
@@ -291,7 +301,7 @@ begin
 	              if ( S_AXI_WSTRB(byte_index) = '1' ) then
 	                -- Respective byte enables are asserted as per write strobes                   
 	                -- slave registor 1
-	                slv_reg1(byte_index*8+7 downto byte_index*8) <= S_AXI_WDATA(byte_index*8+7 downto byte_index*8);
+	                -- slv_reg1(byte_index*8+7 downto byte_index*8) <= S_AXI_WDATA(byte_index*8+7 downto byte_index*8);
 	              end if;
 	            end loop;
 	          when b"00010" =>
@@ -299,7 +309,7 @@ begin
 	              if ( S_AXI_WSTRB(byte_index) = '1' ) then
 	                -- Respective byte enables are asserted as per write strobes                   
 	                -- slave registor 2
-	                slv_reg2(byte_index*8+7 downto byte_index*8) <= S_AXI_WDATA(byte_index*8+7 downto byte_index*8);
+	                -- slv_reg2(byte_index*8+7 downto byte_index*8) <= S_AXI_WDATA(byte_index*8+7 downto byte_index*8);
 	              end if;
 	            end loop;
 	          when b"00011" =>
@@ -535,9 +545,9 @@ begin
 	              end if;
 	            end loop;
 	          when others =>
-	            slv_reg0 <= slv_reg0;
-	            slv_reg1 <= slv_reg1;
-	            slv_reg2 <= slv_reg2;
+	            -- slv_reg0 <= slv_reg0;
+	            -- slv_reg1 <= slv_reg1;
+	            -- slv_reg2 <= slv_reg2;
 	            slv_reg3 <= slv_reg3;
 	            slv_reg4 <= slv_reg4;
 	            slv_reg5 <= slv_reg5;
@@ -654,18 +664,18 @@ begin
 	-- and the slave is ready to accept the read address.
 	slv_reg_rden <= axi_arready and S_AXI_ARVALID and (not axi_rvalid) ;
 
-	process (slv_reg0, slv_reg1, slv_reg2, slv_reg3, slv_reg4, slv_reg5, slv_reg6, slv_reg7, slv_reg8, slv_reg9, slv_reg10, slv_reg11, slv_reg12, slv_reg13, slv_reg14, slv_reg15, slv_reg16, slv_reg17, slv_reg18, slv_reg19, slv_reg20, slv_reg21, slv_reg22, slv_reg23, slv_reg24, slv_reg25, slv_reg26, slv_reg27, slv_reg28, slv_reg29, slv_reg30, slv_reg31, axi_araddr, S_AXI_ARESETN, slv_reg_rden)
+	process (ctrl_reg0, status_reg1, opcount_reg2, slv_reg3, slv_reg4, slv_reg5, slv_reg6, slv_reg7, slv_reg8, slv_reg9, slv_reg10, slv_reg11, slv_reg12, slv_reg13, slv_reg14, slv_reg15, slv_reg16, slv_reg17, slv_reg18, slv_reg19, slv_reg20, slv_reg21, slv_reg22, slv_reg23, slv_reg24, slv_reg25, slv_reg26, slv_reg27, slv_reg28, slv_reg29, slv_reg30, slv_reg31, axi_araddr, S_AXI_ARESETN, slv_reg_rden)
 	variable loc_addr :std_logic_vector(OPT_MEM_ADDR_BITS downto 0);
 	begin
 	    -- Address decoding for reading registers
 	    loc_addr := axi_araddr(ADDR_LSB + OPT_MEM_ADDR_BITS downto ADDR_LSB);
 	    case loc_addr is
 	      when b"00000" =>
-	        reg_data_out <= slv_reg0;
+	        reg_data_out <= ctrl_reg0;
 	      when b"00001" =>
-	        reg_data_out <= slv_reg1;
+	        reg_data_out <= status_reg1;
 	      when b"00010" =>
-	        reg_data_out <= slv_reg2;
+	        reg_data_out <= std_logic_vector(opcount_reg2);
 	      when b"00011" =>
 	        reg_data_out <= slv_reg3;
 	      when b"00100" =>
@@ -747,9 +757,61 @@ begin
 	  end if;
 	end process;
 
-
+	reset_stop <= ctrl_reg0(2);
+	stop_and_clear <= ctrl_reg0(1);
+	reset_controller <= not ctrl_reg0(0);
 	-- Add user logic here
-
+	process (S_AXI_ACLK)
+	variable loc_addr :std_logic_vector(OPT_MEM_ADDR_BITS downto 0); 
+	begin
+	if rising_edge(S_AXI_ACLK) then 
+	    if S_AXI_ARESETN = '0' then
+			ctrl_reg0 <= (others => '0');
+	    else
+			loc_addr := axi_awaddr(ADDR_LSB + OPT_MEM_ADDR_BITS downto ADDR_LSB);
+			if (slv_reg_wren = '1' and loc_addr = b"000000") then
+				if ( S_AXI_WSTRB(0) = '1' ) then
+					-- 7 downto 0
+					ctrl_reg0(7 downto 0) <= S_AXI_WDATA(7 downto 0);
+				end if;
+				if ( S_AXI_WSTRB(1) = '1' ) then
+					-- 13 downto 8
+					ctrl_reg0(13 downto 8) <= S_AXI_WDATA(13 downto 8);
+				end if;
+				if ( S_AXI_WSTRB(2) = '1' ) then
+					-- 23 downto 14
+					ctrl_reg0(23 downto 14) <= S_AXI_WDATA(23 downto 14);
+				end if;
+				if ( S_AXI_WSTRB(3) = '1' ) then
+					-- 31 downto 24
+					ctrl_reg0(31 downto 24) <= S_AXI_WDATA(31 downto 24);
+				end if;
+			else
+				--clear the stop and clear
+				if(ctrl_reg0(1) = '1') then
+					ctrl_reg0(1) <= '0';
+				end if;
+				if(ctrl_reg0(2) = '1') then
+					ctrl_reg0(2) <= '0';
+				end if;
+			end if;
+		end if;
+	end if;
+	end process;
+	
+	process (S_AXI_ACLK)
+	begin
+	if rising_edge(S_AXI_ACLK) then 
+	    if (S_AXI_ARESETN = '0' or ctrl_reg0(0) = '1') then
+			opcount_reg2 <= x"00000000";
+	    else
+			if (cnc_op_written = '1') then
+				opcount_reg2 <= opcount_reg2 + 1;
+			end if;
+		end if;
+	end if;
+	end process;
+	
 	-- User logic ends
 
 end arch_imp;

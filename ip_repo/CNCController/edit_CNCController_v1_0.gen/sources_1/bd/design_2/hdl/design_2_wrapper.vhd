@@ -1,17 +1,17 @@
 --Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
---Date        : Mon Dec 13 01:38:35 2021
+--Date        : Mon Dec 13 23:09:00 2021
 --Host        : jacob-VirtualBox running 64-bit Ubuntu 20.04.3 LTS
---Command     : generate_target design_1_wrapper.bd
---Design      : design_1_wrapper
+--Command     : generate_target design_2_wrapper.bd
+--Design      : design_2_wrapper
 --Purpose     : IP block netlist
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity design_1_wrapper is
+entity design_2_wrapper is
   port (
     AXIS_ACLK : in STD_LOGIC;
     AXIS_ARESETN : in STD_LOGIC;
@@ -54,23 +54,27 @@ entity design_1_wrapper is
     S_AXI_0_wvalid : in STD_LOGIC;
     S_AXI_ACLK : in STD_LOGIC;
     S_AXI_ARESETN : in STD_LOGIC;
+    axi_clear_reset : in STD_LOGIC;
+    axi_reset : in STD_LOGIC_VECTOR ( 0 to 0 );
+    axistop : in STD_LOGIC_VECTOR ( 0 to 0 );
     reverse_in_0 : in STD_LOGIC;
     reverse_out_0 : out STD_LOGIC;
     stop_out : out STD_LOGIC;
     stop_until_clear : in STD_LOGIC
   );
-end design_1_wrapper;
+end design_2_wrapper;
 
-architecture STRUCTURE of design_1_wrapper is
-  component design_1 is
+architecture STRUCTURE of design_2_wrapper is
+  component design_2 is
   port (
+    AXIS_ACLK : in STD_LOGIC;
+    AXIS_ARESETN : in STD_LOGIC;
     S_AXI_ACLK : in STD_LOGIC;
     S_AXI_ARESETN : in STD_LOGIC;
-    AXIS_ACLK : in STD_LOGIC;
-    stop_until_clear : in STD_LOGIC;
+    reverse_in_0 : in STD_LOGIC;
     reverse_out_0 : out STD_LOGIC;
     stop_out : out STD_LOGIC;
-    reverse_in_0 : in STD_LOGIC;
+    stop_until_clear : in STD_LOGIC;
     S_AXIS_0_tdata : in STD_LOGIC_VECTOR ( 63 downto 0 );
     S_AXIS_0_tvalid : in STD_LOGIC;
     S_AXIS_0_tready : out STD_LOGIC;
@@ -108,11 +112,13 @@ architecture STRUCTURE of design_1_wrapper is
     M05_AXIS_0_tdata : out STD_LOGIC_VECTOR ( 7 downto 0 );
     M05_AXIS_0_tvalid : out STD_LOGIC;
     M05_AXIS_0_tready : in STD_LOGIC;
-    AXIS_ARESETN : in STD_LOGIC
+    axi_reset : in STD_LOGIC_VECTOR ( 0 to 0 );
+    axistop : in STD_LOGIC_VECTOR ( 0 to 0 );
+    axi_clear_reset : in STD_LOGIC
   );
-  end component design_1;
+  end component design_2;
 begin
-design_1_i: component design_1
+design_2_i: component design_2
      port map (
       AXIS_ACLK => AXIS_ACLK,
       AXIS_ARESETN => AXIS_ARESETN,
@@ -155,6 +161,9 @@ design_1_i: component design_1
       S_AXI_0_wvalid => S_AXI_0_wvalid,
       S_AXI_ACLK => S_AXI_ACLK,
       S_AXI_ARESETN => S_AXI_ARESETN,
+      axi_clear_reset => axi_clear_reset,
+      axi_reset(0) => axi_reset(0),
+      axistop(0) => axistop(0),
       reverse_in_0 => reverse_in_0,
       reverse_out_0 => reverse_out_0,
       stop_out => stop_out,

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="design_2_wrapper_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="design_2_wrapper_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
+      <ZoomEndTime time="9.000001 us"></ZoomEndTime>
+      <Cursor1Time time="0.905000 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="229"></NameColumnWidth>
+      <ValueColumnWidth column_width="81"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="52" />
+   <wvobject type="logic" fp_name="/design_2_wrapper_tb/AXIS_ACLK">
+      <obj_property name="ElementShortName">AXIS_ACLK</obj_property>
+      <obj_property name="ObjectShortName">AXIS_ACLK</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_2_wrapper_tb/AXIS_ARESETN">
+      <obj_property name="ElementShortName">AXIS_ARESETN</obj_property>
+      <obj_property name="ObjectShortName">AXIS_ARESETN</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/design_2_wrapper_tb/axi_reset">
+      <obj_property name="ElementShortName">axi_reset[0:0]</obj_property>
+      <obj_property name="ObjectShortName">axi_reset[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/design_2_wrapper_tb/uut/design_2_i/util_vector_logic_1/Res">
+      <obj_property name="ElementShortName">Res[0:0]</obj_property>
+      <obj_property name="ObjectShortName">Res[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/design_2_wrapper_tb/M01_AXIS_0_tdata">
+      <obj_property name="ElementShortName">M01_AXIS_0_tdata[7:0]</obj_property>
+      <obj_property name="ObjectShortName">M01_AXIS_0_tdata[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_2_wrapper_tb/M01_AXIS_0_tready">
+      <obj_property name="ElementShortName">M01_AXIS_0_tready</obj_property>
+      <obj_property name="ObjectShortName">M01_AXIS_0_tready</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_2_wrapper_tb/M01_AXIS_0_tvalid">
+      <obj_property name="ElementShortName">M01_AXIS_0_tvalid</obj_property>
+      <obj_property name="ObjectShortName">M01_AXIS_0_tvalid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/design_2_wrapper_tb/M02_AXIS_0_tdata">
+      <obj_property name="ElementShortName">M02_AXIS_0_tdata[7:0]</obj_property>
+      <obj_property name="ObjectShortName">M02_AXIS_0_tdata[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_2_wrapper_tb/M02_AXIS_0_tready">
+      <obj_property name="ElementShortName">M02_AXIS_0_tready</obj_property>
+      <obj_property name="ObjectShortName">M02_AXIS_0_tready</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_2_wrapper_tb/M02_AXIS_0_tvalid">
+      <obj_property name="ElementShortName">M02_AXIS_0_tvalid</obj_property>
+      <obj_property name="ObjectShortName">M02_AXIS_0_tvalid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/design_2_wrapper_tb/M03_AXIS_0_tdata">
+      <obj_property name="ElementShortName">M03_AXIS_0_tdata[7:0]</obj_property>
+      <obj_property name="ObjectShortName">M03_AXIS_0_tdata[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_2_wrapper_tb/M03_AXIS_0_tready">
+      <obj_property name="ElementShortName">M03_AXIS_0_tready</obj_property>
+      <obj_property name="ObjectShortName">M03_AXIS_0_tready</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_2_wrapper_tb/M03_AXIS_0_tvalid">
+      <obj_property name="ElementShortName">M03_AXIS_0_tvalid</obj_property>
+      <obj_property name="ObjectShortName">M03_AXIS_0_tvalid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/design_2_wrapper_tb/M04_AXIS_0_tdata">
+      <obj_property name="ElementShortName">M04_AXIS_0_tdata[7:0]</obj_property>
+      <obj_property name="ObjectShortName">M04_AXIS_0_tdata[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_2_wrapper_tb/M04_AXIS_0_tready">
+      <obj_property name="ElementShortName">M04_AXIS_0_tready</obj_property>
+      <obj_property name="ObjectShortName">M04_AXIS_0_tready</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_2_wrapper_tb/M04_AXIS_0_tvalid">
+      <obj_property name="ElementShortName">M04_AXIS_0_tvalid</obj_property>
+      <obj_property name="ObjectShortName">M04_AXIS_0_tvalid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/design_2_wrapper_tb/M05_AXIS_0_tdata">
+      <obj_property name="ElementShortName">M05_AXIS_0_tdata[7:0]</obj_property>
+      <obj_property name="ObjectShortName">M05_AXIS_0_tdata[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_2_wrapper_tb/M05_AXIS_0_tready">
+      <obj_property name="ElementShortName">M05_AXIS_0_tready</obj_property>
+      <obj_property name="ObjectShortName">M05_AXIS_0_tready</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_2_wrapper_tb/M05_AXIS_0_tvalid">
+      <obj_property name="ElementShortName">M05_AXIS_0_tvalid</obj_property>
+      <obj_property name="ObjectShortName">M05_AXIS_0_tvalid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/design_2_wrapper_tb/S_AXIS_0_tdata">
+      <obj_property name="ElementShortName">S_AXIS_0_tdata[63:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXIS_0_tdata[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_2_wrapper_tb/S_AXIS_0_tready">
+      <obj_property name="ElementShortName">S_AXIS_0_tready</obj_property>
+      <obj_property name="ObjectShortName">S_AXIS_0_tready</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_2_wrapper_tb/S_AXIS_0_tvalid">
+      <obj_property name="ElementShortName">S_AXIS_0_tvalid</obj_property>
+      <obj_property name="ObjectShortName">S_AXIS_0_tvalid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/design_2_wrapper_tb/S_AXI_0_araddr">
+      <obj_property name="ElementShortName">S_AXI_0_araddr[6:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_0_araddr[6:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/design_2_wrapper_tb/S_AXI_0_arprot">
+      <obj_property name="ElementShortName">S_AXI_0_arprot[2:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_0_arprot[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_2_wrapper_tb/S_AXI_0_arready">
+      <obj_property name="ElementShortName">S_AXI_0_arready</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_0_arready</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_2_wrapper_tb/S_AXI_0_arvalid">
+      <obj_property name="ElementShortName">S_AXI_0_arvalid</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_0_arvalid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/design_2_wrapper_tb/S_AXI_0_awaddr">
+      <obj_property name="ElementShortName">S_AXI_0_awaddr[6:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_0_awaddr[6:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/design_2_wrapper_tb/S_AXI_0_awprot">
+      <obj_property name="ElementShortName">S_AXI_0_awprot[2:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_0_awprot[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_2_wrapper_tb/S_AXI_0_awready">
+      <obj_property name="ElementShortName">S_AXI_0_awready</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_0_awready</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_2_wrapper_tb/S_AXI_0_awvalid">
+      <obj_property name="ElementShortName">S_AXI_0_awvalid</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_0_awvalid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_2_wrapper_tb/S_AXI_0_bready">
+      <obj_property name="ElementShortName">S_AXI_0_bready</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_0_bready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/design_2_wrapper_tb/S_AXI_0_bresp">
+      <obj_property name="ElementShortName">S_AXI_0_bresp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_0_bresp[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_2_wrapper_tb/S_AXI_0_bvalid">
+      <obj_property name="ElementShortName">S_AXI_0_bvalid</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_0_bvalid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/design_2_wrapper_tb/S_AXI_0_rdata">
+      <obj_property name="ElementShortName">S_AXI_0_rdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_0_rdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_2_wrapper_tb/S_AXI_0_rready">
+      <obj_property name="ElementShortName">S_AXI_0_rready</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_0_rready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/design_2_wrapper_tb/S_AXI_0_rresp">
+      <obj_property name="ElementShortName">S_AXI_0_rresp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_0_rresp[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_2_wrapper_tb/S_AXI_0_rvalid">
+      <obj_property name="ElementShortName">S_AXI_0_rvalid</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_0_rvalid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/design_2_wrapper_tb/S_AXI_0_wdata">
+      <obj_property name="ElementShortName">S_AXI_0_wdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_0_wdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_2_wrapper_tb/S_AXI_0_wready">
+      <obj_property name="ElementShortName">S_AXI_0_wready</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_0_wready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/design_2_wrapper_tb/S_AXI_0_wstrb">
+      <obj_property name="ElementShortName">S_AXI_0_wstrb[3:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_0_wstrb[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_2_wrapper_tb/S_AXI_0_wvalid">
+      <obj_property name="ElementShortName">S_AXI_0_wvalid</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_0_wvalid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_2_wrapper_tb/S_AXI_ACLK">
+      <obj_property name="ElementShortName">S_AXI_ACLK</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_ACLK</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_2_wrapper_tb/S_AXI_ARESETN">
+      <obj_property name="ElementShortName">S_AXI_ARESETN</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_ARESETN</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_2_wrapper_tb/reverse_in_0">
+      <obj_property name="ElementShortName">reverse_in_0</obj_property>
+      <obj_property name="ObjectShortName">reverse_in_0</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_2_wrapper_tb/reverse_out_0">
+      <obj_property name="ElementShortName">reverse_out_0</obj_property>
+      <obj_property name="ObjectShortName">reverse_out_0</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_2_wrapper_tb/stop_out">
+      <obj_property name="ElementShortName">stop_out</obj_property>
+      <obj_property name="ObjectShortName">stop_out</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_2_wrapper_tb/stop_until_clear">
+      <obj_property name="ElementShortName">stop_until_clear</obj_property>
+      <obj_property name="ObjectShortName">stop_until_clear</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/design_2_wrapper_tb/axistop">
+      <obj_property name="ElementShortName">axistop[0:0]</obj_property>
+      <obj_property name="ObjectShortName">axistop[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_2_wrapper_tb/axi_clear_reset">
+      <obj_property name="ElementShortName">axi_clear_reset</obj_property>
+      <obj_property name="ObjectShortName">axi_clear_reset</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/design_2_wrapper_tb/uut/design_2_i/LatchAndClear_0/U0/outsig">
+      <obj_property name="ElementShortName">outsig</obj_property>
+      <obj_property name="ObjectShortName">outsig</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/design_2_wrapper_tb/stop_the_clock">
+      <obj_property name="ElementShortName">stop_the_clock</obj_property>
+      <obj_property name="ObjectShortName">stop_the_clock</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/design_2_wrapper_tb/clock_period">
+      <obj_property name="ElementShortName">clock_period</obj_property>
+      <obj_property name="ObjectShortName">clock_period</obj_property>
+   </wvobject>
+</wave_config>
