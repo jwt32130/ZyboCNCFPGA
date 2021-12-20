@@ -1,0 +1,15 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
+| Date         : Fri Nov 12 22:10:54 2021
+| Host         : jacob-VirtualBox running 64-bit Ubuntu 20.04.3 LTS
+| Command      : report_bus_skew -warn_on_violation -file TestAdder_v1_0_bus_skew_routed.rpt -pb TestAdder_v1_0_bus_skew_routed.pb -rpx TestAdder_v1_0_bus_skew_routed.rpx
+| Design       : TestAdder_v1_0
+| Device       : 7z020-clg400
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Bus Skew Report
+
+No bus skew constraints
+

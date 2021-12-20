@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <spirit:vendor>user.org</spirit:vendor>
+  <spirit:library>user</spirit:library>
+  <spirit:name>TeknicSDMotorController</spirit:name>
+  <spirit:version>1.0</spirit:version>
+  <spirit:busInterfaces>
+    <spirit:busInterface>
+      <spirit:name>S00_AXIS</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="axis" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="axis_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TDATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axis_tdata</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axis_tvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axis_tready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>WIZ_DATA_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:id="BUSIFPARAM_VALUE.S00_AXIS.WIZ_DATA_WIDTH" spirit:choiceRef="choice_list_6fc15197">32</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>S00_AXIS_RST</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axis_aresetn</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>POLARITY</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S00_AXIS_RST.POLARITY" spirit:choiceRef="choice_list_9d8b0d81">ACTIVE_LOW</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>S00_AXIS_CLK</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axis_aclk</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_BUSIF</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S00_AXIS_CLK.ASSOCIATED_BUSIF">S00_AXIS</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_RESET</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S00_AXIS_CLK.ASSOCIATED_RESET">s00_axis_aresetn</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+  </spirit:busInterfaces>
+  <spirit:model>
+    <spirit:views>
+      <spirit:view>
+        <spirit:name>xilinx_vhdlsynthesis</spirit:name>
+        <spirit:displayName>VHDL Synthesis</spirit:displayName>
+        <spirit:envIdentifier>vhdlSource:vivado.xilinx.com:synthesis</spirit:envIdentifier>
+        <spirit:language>vhdl</spirit:language>
+        <spirit:modelName>TeknicSDMotorController_v1_0</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_vhdlsynthesis_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>18398412</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_vhdlbehavioralsimulation</spirit:name>
+        <spirit:displayName>VHDL Simulation</spirit:displayName>
+        <spirit:envIdentifier>vhdlSource:vivado.xilinx.com:simulation</spirit:envIdentifier>
+        <spirit:language>vhdl</spirit:language>
+        <spirit:modelName>TeknicSDMotorController_v1_0</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_vhdlbehavioralsimulation_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>18398412</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_xpgui</spirit:name>
+        <spirit:displayName>UI Layout</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:xgui.ui</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_xpgui_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>f92e9879</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>bd_tcl</spirit:name>
+        <spirit:displayName>Block Diagram</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:block.diagram</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>bd_tcl_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>45a2f450</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+    </spirit:views>
+    <spirit:ports>
+      <spirit:port>
+        <spirit:name>motor_out</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>motor_out2</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>motor_out3</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>motor_out4</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axis_aclk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axis_aresetn</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axis_tready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axis_tdata</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">7</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axis_tvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+    </spirit:ports>
+  </spirit:model>
+  <spirit:choices>
+    <spirit:choice>
+      <spirit:name>choice_list_6fc15197</spirit:name>
+      <spirit:enumeration>32</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_9d8b0d81</spirit:name>
+      <spirit:enumeration>ACTIVE_HIGH</spirit:enumeration>
+      <spirit:enumeration>ACTIVE_LOW</spirit:enumeration>
+    </spirit:choice>
+  </spirit:choices>
+  <spirit:fileSets>
+    <spirit:fileSet>
+      <spirit:name>xilinx_vhdlsynthesis_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>hdl/TeknicSDMotorController_v1_0_S00_AXIS.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/TeknicSDMotorController_v1_0.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_b07560e1</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_vhdlbehavioralsimulation_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>hdl/TeknicSDMotorController_v1_0_S00_AXIS.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/TeknicSDMotorController_v1_0.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_xpgui_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>xgui/TeknicSDMotorController_v1_0.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_f92e9879</spirit:userFileType>
+        <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>bd_tcl_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>bd/bd.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+  </spirit:fileSets>
+  <spirit:description>My new AXI IP</spirit:description>
+  <spirit:parameters>
+    <spirit:parameter>
+      <spirit:name>Component_Name</spirit:name>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">TeknicSDMotorController_v1_0</spirit:value>
+    </spirit:parameter>
+  </spirit:parameters>
+  <spirit:vendorExtensions>
+    <xilinx:coreExtensions>
+      <xilinx:supportedFamilies>
+        <xilinx:family xilinx:lifeCycle="Pre-Production">zynq</xilinx:family>
+      </xilinx:supportedFamilies>
+      <xilinx:taxonomies>
+        <xilinx:taxonomy>AXI_Peripheral</xilinx:taxonomy>
+      </xilinx:taxonomies>
+      <xilinx:displayName>TeknicSDMotorController_v1.0</xilinx:displayName>
+      <xilinx:coreRevision>14</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2021-12-20T03:58:44Z</xilinx:coreCreationDateTime>
+      <xilinx:tags>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1e5d5421_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7b32f2ec_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2d3d6a6d_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7f20b2cf_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@59f1cc24_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7bad3c71_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@58e1f0d7_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7d8df014_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4d11a89f_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@43db65f7_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@579f854f_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@26721b69_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@61ce6e2b_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@66ad37fc_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@b2f20df_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@40f838c2_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1b925e43_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@11e5aa51_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@74984a78_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3fea88e6_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@27bfa3df_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7ce48c30_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3bf5ef7c_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@79020d43_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@67a95dcc_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@901504b_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4316b016_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@57e9f2ab_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@452b501e_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3e38065_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5eb8f03f_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4c9170aa_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@173fb72b_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1a522267_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@367dc089_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7ece4173_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4dc35c8b_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@73ec918e_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@75f82a37_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@16a57360_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@202e12b2_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@34f17670_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2a5cdd37_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@15522e2e_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@48635a97_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5c503723_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1e04234e_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@75030096_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3858caa8_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@651bc555_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6a77f4c_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1d82bbe4_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5d98d20b_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@77cefb23_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@24673ffd_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1a2e9316_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7e87fc9d_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@30919863_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@423cd166_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@71b4f076_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5c0baba_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6baf0145_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@e98bb5a_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@241ef5a0_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@759b1dda_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@37cb593_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3cf82e56_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@45a76415_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2b428ef8_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1c5c52ca_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7b3d9631_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3c1d8f63_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2b9fefe0_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@225133a8_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1041a6ce_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@784514cd_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5aba6a9e_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@fc1b33d_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@36cee3a1_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@c141729_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@e4af0e_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7ff7117a_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@185f8eeb_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2f4fc632_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2e412e6c_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@22f6a18a_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7c4a6b85_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@77176da8_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5bbc03b0_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@977bc24_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4ec6694c_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4b407b6f_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@545a716e_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5cc85807_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@57922b51_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3a948c21_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6899eedd_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@21d0e61b_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@45625cd5_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@106926bf_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4ab57222_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4dc73db6_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2cd5bbe8_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2c85e097_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5ef31cb9_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5ce158d1_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1c32ae24_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7ea5b98c_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2eef424d_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7e51a159_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@268d702a_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5a7a2962_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@35e63864_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@17b482f5_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5571b70e_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7b72b9b0_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@48ca3085_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5bf2f4cc_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7ad4e600_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1fd94a20_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1061faf_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6cdd730b_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@62684371_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@50aaafac_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3c922e8_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4500296_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7c7e9fca_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@48d35235_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3e9647ca_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@249bd544_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@48994de7_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5bf30f5d_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@810f77d_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1e8d85e_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2b86071e_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@39d53d06_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@762c2188_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3c9ccfb5_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@168a1dd6_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@700e6846_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@27cf91ac_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@22244f08_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@616dd8a3_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@65f6f4b6_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@aa4355a_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@227409ad_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@121f688f_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@668628e8_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2b2a9b7e_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TeknicSDMotorController/TeknicSDMotorController_1.0</xilinx:tag>
+      </xilinx:tags>
+    </xilinx:coreExtensions>
+    <xilinx:packagingInfo>
+      <xilinx:xilinxVersion>2021.1</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="0552d69f"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="489185c7"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="7b9d3bd4"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="653c6157"/>
+    </xilinx:packagingInfo>
+  </spirit:vendorExtensions>
+</spirit:component>

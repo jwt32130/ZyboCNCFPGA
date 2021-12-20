@@ -1327,3 +1327,15 @@ con
 20:45:55 INFO  : Result from executing command 'getPlatforms': 
 20:48:05 INFO  : Invoking Bootgen: bootgen -image output.bif -arch zynq -o /home/jacob/Documents/CNCMillZybo/ZyboFPGA/SDK/BOOT.bin -w on
 20:48:07 INFO  : Bootgen command execution is done.
+19:40:59 INFO  : Launching XSCT server: xsct -n  -interactive /home/jacob/Documents/CNCMillZybo/ZyboFPGA/SDK/temp_xsdb_launch_script.tcl
+19:41:01 INFO  : Platform repository initialization has completed.
+19:41:01 INFO  : Registering command handlers for Vitis TCF services
+19:41:02 INFO  : XSCT server has started successfully.
+19:41:02 INFO  : Successfully done setting XSCT server connection channel  
+19:41:02 INFO  : plnx-install-location is set to ''
+19:41:02 INFO  : Successfully done setting workspace for the tool. 
+19:41:02 INFO  : Successfully done query RDI_DATADIR 
+19:47:58 INFO  : Invoking Bootgen: bootgen -image output.bif -arch zynq -o /home/jacob/Documents/CNCMillZybo/ZyboFPGA/SDK/BOOT.bin -w on
+19:48:00 INFO  : Bootgen command execution is done.
+22:07:31 INFO  : Invoking Bootgen: bootgen -image output.bif -arch zynq -o /home/jacob/Documents/CNCMillZybo/ZyboFPGA/SDK/BOOT.bin -w on
+22:07:32 INFO  : Bootgen command execution is done.

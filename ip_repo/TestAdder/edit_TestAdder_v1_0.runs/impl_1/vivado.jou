@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Fri Nov 12 22:10:21 2021
+# Process ID: 145070
+# Current directory: /home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/edit_TestAdder_v1_0.runs/impl_1
+# Command line: vivado -log TestAdder_v1_0.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source TestAdder_v1_0.tcl -notrace
+# Log file: /home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/edit_TestAdder_v1_0.runs/impl_1/TestAdder_v1_0.vdi
+# Journal file: /home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/edit_TestAdder_v1_0.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source TestAdder_v1_0.tcl -notrace

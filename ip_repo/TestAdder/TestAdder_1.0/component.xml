@@ -824,7 +824,7 @@
       </xilinx:taxonomies>
       <xilinx:displayName>TestAdder_v1.0</xilinx:displayName>
       <xilinx:coreRevision>6</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2021-11-25T23:34:55Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2021-12-20T01:04:18Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="ui.data.coregen.df@e35fea1_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TestAdder_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.df@2f612212_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TestAdder_1.0</xilinx:tag>
@@ -885,6 +885,16 @@
         <xilinx:tag xilinx:name="ui.data.coregen.df@5c2972a4_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TestAdder_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.df@177afbed_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TestAdder_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.df@1c724de2_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TestAdder_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1ce7a2e4_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TestAdder/TestAdder_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1f535fa5_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TestAdder/TestAdder_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@23d88154_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TestAdder/TestAdder_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@448f675b_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TestAdder/TestAdder_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2266a1d9_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TestAdder/TestAdder_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5732271f_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TestAdder/TestAdder_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@e03b4d6_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TestAdder/TestAdder_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@24aae775_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TestAdder/TestAdder_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3183c6f8_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TestAdder/TestAdder_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@70940cfd_ARCHIVE_LOCATION">/home/jacob/Documents/CNCMillZybo/ZyboFPGA/ip_repo/TestAdder/TestAdder_1.0</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>

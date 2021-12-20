@@ -129,3 +129,6 @@ timestamp=[2021-11-27 17:22:44], mode=PLATFORM_GENERATION, duration=0:00:05.561,
 timestamp=[2021-11-27 17:23:25], mode=PLATFORM_GENERATION, duration=0:00:08.630, duration_ms=8630, data={name=TestHardware}
 timestamp=[2021-11-27 20:45:13], mode=PLATFORM_GENERATION, duration=0:00:05.422, duration_ms=5422, data={name=TestHardware}
 timestamp=[2021-11-27 20:45:58], mode=PLATFORM_GENERATION, duration=0:00:08.692, duration_ms=8692, data={name=TestHardware}
+timestamp=[2021-12-18 19:41:00], mode=WORKBENCH_START, duration=0:00:07.797, duration_ms=7797, data={}
+timestamp=[2021-12-18 19:41:01], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.053, duration_ms=53, data={}
+timestamp=[2021-12-18 19:41:02], mode=WORKBENCH_UI_INIT, duration=0:00:01.514, duration_ms=1514, data={editors_count=10, platform_editors_count=9, projects_count=4, platform_projects_count=1, active_platform_editor=true, projects=RemoteSystemsTempFiles,TestHardware,TestIO,TestIO_system}
