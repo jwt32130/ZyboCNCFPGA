@@ -15,10 +15,9 @@ entity TeknicSDMotorController_v1_0 is
 	-- );
 	port (
 		-- Users to add ports here
-		motor_out : out std_logic;
-		motor_out2 : out std_logic;
-		motor_out3 : out std_logic;
-		motor_out4 : out std_logic;
+		direction : out std_logic;
+		step : out std_logic;
+		enable : out std_logic;
 		-- User ports ends
 		-- Do not modify the ports beyond this line
 
@@ -42,10 +41,9 @@ architecture arch_imp of TeknicSDMotorController_v1_0 is
 		-- C_S_AXIS_TDATA_WIDTH	: integer	:= 32
 		-- );
 		port (
-		motor_out : out std_logic;
-		motor_out2 : out std_logic;
-		motor_out3 : out std_logic;
-		motor_out4 : out std_logic;
+		direction : out std_logic;
+		step : out std_logic;
+		enable : out std_logic;
 		S_AXIS_ACLK	: in std_logic;
 		S_AXIS_ARESETN	: in std_logic;
 		S_AXIS_TREADY	: out std_logic;
@@ -64,10 +62,9 @@ TeknicSDMotorController_v1_0_S00_AXIS_inst : TeknicSDMotorController_v1_0_S00_AX
 		-- C_S_AXIS_TDATA_WIDTH	=> C_S00_AXIS_TDATA_WIDTH
 	-- )
 	port map (
-		motor_out => motor_out,
-		motor_out2 => motor_out2,
-		motor_out3 => motor_out3,
-		motor_out4 => motor_out4,
+		direction => direction,
+		step => step,
+		enable => enable,
 		S_AXIS_ACLK	=> s00_axis_aclk,
 		S_AXIS_ARESETN	=> s00_axis_aresetn,
 		S_AXIS_TREADY	=> s00_axis_tready,

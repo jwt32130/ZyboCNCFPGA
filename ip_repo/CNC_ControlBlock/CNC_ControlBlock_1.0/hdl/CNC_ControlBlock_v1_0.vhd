@@ -101,6 +101,7 @@ CNC_ControlBlock_v1_0_S00_AXI_inst : CNC_ControlBlock_v1_0_S00_AXI
 		stop_and_clear => stop_and_clear,
 		reset_stop => reset_stop,
 		cnc_op_written => cnc_op_written,
+		enable_reverse_option => enable_reverse_option,
 		S_AXI_ACLK	=> s00_axi_aclk,
 		S_AXI_ARESETN	=> s00_axi_aresetn,
 		S_AXI_AWADDR	=> s00_axi_awaddr,
